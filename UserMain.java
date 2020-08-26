@@ -80,9 +80,13 @@ public class UserMain {
         System.out.println(salaryAccumulatedUser1);
 
         //TODO : WEB-5
-        Boolean isCanadian= UserDetails.VerifyCountry(user3);
-        System.out.println(UserDetails.FullName(user3)+" is "+isCanadian);
-
+            try {
+            Boolean isCanadian = UserDetails.VerifyCountry(user3);
+            System.out.println(UserDetails.FullName(user3) + " is " + isCanadian);
+        }
+        catch(NullPointerException e){
+            e.printStackTrace();
+        }
 
     }
 }
